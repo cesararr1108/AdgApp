@@ -1,0 +1,108 @@
+
+<ion-content class="ion-no-padding ion-no-margin" >
+ 
+    <!-- <img src="../../../assets/img/logo.png"  />-->
+
+  <ion-card>
+    <div class="logo"> 
+      <!-- <ion-icon name="trending-up-outline" size="large" class="back_logo"></ion-icon> -->
+      <ion-item>
+        <ion-label class="text_logo">ADG</ion-label>
+      </ion-item> 
+       <ion-item>
+         <ion-icon name="calendar-number"></ion-icon>
+         <ion-icon name="cellular" color="danger"></ion-icon>
+         <ion-icon name="settings" color="warning"></ion-icon>
+         <ion-icon name="calendar-number" color="success"></ion-icon>
+        </ion-item> 
+     </div>
+
+    <ion-segment value="Login">
+      <ion-segment-button value="Login">
+        <ion-item>
+          <ion-icon name="log-in-outline" color="primary"></ion-icon>
+          <ion-label>Login</ion-label>
+        </ion-item>
+      </ion-segment-button>
+      <ion-segment-button value="Registrar">
+        <ion-item>
+          <ion-icon name="person-add-outline" color="primary"></ion-icon>
+          <ion-label>Registrar</ion-label>
+        </ion-item>
+      </ion-segment-button>
+    </ion-segment>
+         
+    <ion-slides mode="ios" pager="ios" scrollbar="ios">
+      <ion-slide>
+        <ion-card-content>
+          <ion-label >Usuario</ion-label>
+            <ion-input type="text"  [(ngModel)]="user" class="ion-padding">
+              <ion-icon name="person" size="medium" slot="end"></ion-icon> 
+            </ion-input>
+    
+            <ion-label>Contraseña</ion-label>
+            <ion-input type="password"  [(ngModel)]="clave" class="ion-padding">
+                <ion-icon name="key" size="medium" slot="end"></ion-icon> 
+            </ion-input>
+          <br>
+          <ion-item class="recordar">
+            <ion-label >Recordar datos</ion-label><ion-toggle color="secondary" size="large" class="ion-no-padding" ></ion-toggle>
+          </ion-item>
+            
+          <ion-button (click)="loguear()" expand="expand" class="ion-padding"  shape="round">Iniciar sesion </ion-button>
+    
+          <p>
+            Olvide mi contraseña
+          </p>
+
+           <ion-item class="carrusel_empresas">
+             <img src="../../../assets/img/roma_logo-removebg.png" />
+             <img src="../../../assets/img/cm_logo-removebg.png" />
+           </ion-item>
+        </ion-card-content>
+      </ion-slide>
+      <ion-slide>
+         <ion-card-content>
+            <ion-label >Nit</ion-label>
+            <ion-input type="text"  [(ngModel)]="user" class="ion-padding">
+              <ion-icon name="pencil" size="medium" slot="end"></ion-icon> 
+            </ion-input>
+
+            <ion-label>Organización</ion-label>
+            <ion-select value="peperoni" multiple="false" placeholder="Select Pizza">
+              <ion-select-option value="peperoni">Peperoni</ion-select-option>
+              <ion-select-option value="hawaii">Hawaii</ion-select-option>
+            </ion-select>
+
+     
+            <ion-label >Cedula</ion-label>
+            <ion-input type="text"  class="ion-padding"></ion-input>  
+            
+            <ion-label >Nombres</ion-label>
+            <ion-input type="text"  class="ion-padding"></ion-input> 
+
+            <ion-label >Apellidos</ion-label>
+            <ion-input type="text"  class="ion-padding"></ion-input> 
+
+            <ion-label >Email de cliente</ion-label>
+            <ion-input type="text"  class="ion-padding">
+              <ion-icon name="mail" size="medium" slot="end"></ion-icon> 
+            </ion-input> 
+
+            <ion-label >Email de vendedor</ion-label>
+            <ion-input type="text"  class="ion-padding">
+              <ion-icon name="mail" size="medium" slot="end"></ion-icon> 
+            </ion-input> 
+          
+            <ion-label >Telefono</ion-label>
+            <ion-input type="text"  class="ion-padding">
+              <ion-icon name="call" size="medium" slot="end"></ion-icon>
+            </ion-input> 
+        
+         </ion-card-content>
+      </ion-slide>
+    </ion-slides>
+
+  </ion-card>
+
+</ion-content>
